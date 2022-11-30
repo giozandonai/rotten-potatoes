@@ -12,6 +12,7 @@ MONGODB_USERNAME => Usuário do MongoDB<br>
 MONGODB_PASSWORD => Senha do MongoDB<br>
 
 ### Observações do projeto
+A aplicação é exposta: <br>
 **docker compose** Usando a porta 8080<br>
 **Kubernetes** Usando o ingress bare metal na porta 80<br>
 
@@ -38,7 +39,7 @@ CMD gunicorn --bind 0.0.0.0:5000 -c config.py app:app
 **Acessando mongo-express:**
 `http://localhost:8090`
 
-## Subindo com KUBERNETES
+## Subindo com KUBERNETES (sem mongo-express)
 Acessar a pasta ./k8s:<br>
 `kubectl apply -f . -R`<br>
 `http://nome_dominio`<br>
